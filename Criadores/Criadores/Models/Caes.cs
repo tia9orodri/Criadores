@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -40,5 +41,15 @@ namespace Criadores.Models {
         /// Identificador LOP de um cão
         /// </summary>
         public string LOP { get; set; }
+
+        //**************************************************************************
+
+        /// <summary>
+        /// FK para a raça do cão
+        /// </summary>
+        [ForeignKey("Raça")] //esta anotação indica que o atributo 'RACAFK' está a executar o mesmo que o atributo 'Raca', e que representa uma FK para
+                                //a classe Raca
+        public int RacaFK { get; set; } //atributo para usar no SGBD e no C#. Representa a FK para aRaça do cão
+        public Racas Raca { get; set; } //atributo para ser usado no C#. Representa a FK para a Raça do cão
     }
 }

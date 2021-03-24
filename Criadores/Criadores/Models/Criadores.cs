@@ -32,12 +32,12 @@ namespace Criadores.Models {
         /// <summary>
         /// Codigo Postal do criador
         /// </summary>
-        public int CodigoPostal { get; set; }
+        public string CodigoPostal { get; set; }
 
         /// <summary>
         /// Numero de telemovel do criador
         /// </summary>
-        public int Telemovel { get; set; }
+        public string Telemovel { get; set; }
 
         /// <summary>
         /// Email do Criador
